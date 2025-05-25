@@ -1,0 +1,22 @@
+# Command line:
+#	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_POLL+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:500us:14:12
+#
+#	main_cpu:           0
+#	duration:           10h
+#	a|b randomized:     False
+#	a|b duration:       1s
+#
+# 1 poll, 0 benchmarks, 2 longitudinals.
+#
+# poll 1 of 1
+#	sample cpu:    12
+#	control cpu:   14
+#	msr:           0x611
+#	flags:         OP_POLL OP_MPERF OP_APERF OP_THERM OP_PTHERM DELTA_MPERF DELTA_APERF DELTA_MSRDATA
+#	interval:      500us
+#
+#
+# longitudinal 0 of 2:  type=FIXED_FUNCTION_COUNTERS.
+#	sample cpu:  0
+# longitudinal 1 of 2:  type=ENERGY_COUNTERS.
+#	sample cpu:  8
