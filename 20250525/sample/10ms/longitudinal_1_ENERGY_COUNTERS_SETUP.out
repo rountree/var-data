@@ -1,0 +1,3 @@
+# bitfield for header selection is:  0x465
+ cpu err msr msrdata tsc
+ 0x8 0 0x606 0xa0e03 0x4cda9a04d77771

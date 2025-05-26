@@ -2,6 +2,9 @@ Idle measurement at different sampling rates.
 
 job.out erroneously reports duration as 10h.
 
+mperf isn't reliable under lots of idle time and tsc wasn't included.
+This isn't worth trying to correct.  Re-run with tsc.
+
 ==> ./sample/10ms/job.out <==
 # Command line:
 #	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_READ+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:10ms:14:12
