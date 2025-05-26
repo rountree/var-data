@@ -5,22 +5,19 @@ job.out erroneously reports duration as 10h.
 mperf isn't reliable under lots of idle time and tsc wasn't included.
 This isn't worth trying to correct.  Re-run with tsc.
 
-==> ./sample/10ms/job.out <==
+No OP_TSC or DELTA_TSC specified on command line, but empty tsc and dtsc files generated.
+
 # Command line:
 #	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_READ+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:10ms:14:12
 
-==> ./sample/1s/job.out <==
 # Command line:
 #	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_READ+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:1s:14:12
 
-==> ./sample/10s/job.out <==
 # Command line:
 #	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_READ+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:10s:14:12
 
-==> ./sample/100ms/job.out <==
 # Command line:
 #	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_READ+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:100ms:14:12
 
-==> ./poll/job.out <==
 # Command line:
 #	 ./var -t 10m -m 0 -l FIXED_FUNCTION_COUNTERS:0-15 -l ENERGY_COUNTERS:8 -p 0x611:OP_POLL+OP_MPERF+OP_APERF+OP_THERM+OP_PTHERM+DELTA_MPERF+DELTA_APERF+DELTA_MSRDATA:500us:14:12
