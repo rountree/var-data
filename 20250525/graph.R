@@ -15,7 +15,7 @@ Pfiles = c( "poll_0_aperf_0x611.out",
             "poll_0_msrdata_0x611.out",
             "poll_0_dmsrdata_0x611.out" )
 
-intervals_ms = c( 0, 100, 10, 1000, 10000 )
+intervals_ms = c( 0, 10, 100, 1000, 10000 )
 
 
 load_data <- function() {
@@ -42,6 +42,7 @@ load_data <- function() {
         l <<- rbind( l, temp )
 
     }
-
-
+    d$dJ <<- d$dmsrdata / (2^15)
+    d$dS <<- d$dtsc     / 2400000000
+    d$dW <<- d$dJ       / d$dS
 }
